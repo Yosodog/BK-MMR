@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- This page goes into the 'IPS pages' page and the 'MMR folder' gets uploaded to the server. I know, it's stupid -->
+
+<head>
+<!-- Required meta tags always come first -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="mmr/css/flatly.css">
+
+<style>
+
+body {
+	background: #2c3e50;
+}
+
+.spacing {
+	margin-top: 65px;
+}
+
+a, a:hover {
+	color: #2c3e50;
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="container">
+	<div class="spacing"></div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#mmr" data-toggle="tab" aria-expanded="true">Calc MMR</a></li>
+						<li class=""><a href="#score" data-toggle="tab" aria-expanded="false">MMR Score</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane fade active in" id="mmr">
+						<h3 class="text-center">MMR Calculator</h3>
+							<form class="form-horizontal">
+								<fieldset>
+									<div class="form-group">
+										<label for="cities" class="col-lg-2 control-label">Cities</label>
+										<div class="col-lg-10">
+											<input type="number" id="cities" placeholder="Cities" class="form-control" min="1">
+										</div>
+									</div>
+								</fieldset>
+								<a href="#" class="btn btn-primary btn-lg btn-block" id="calcMMR">Calculate</a>
+							</form>	
+							<hr>
+							<div class="row">
+								<div class="col-md-6">
+									<h4 class="text-center">Resources</h4>
+									<table class="table table-hover">
+										<tbody>
+											<tr>
+												<th>Money</th>
+												<td class="text-right">$<span id="money">0</span></td>
+											</tr>
+											<tr>
+												<th>Food</th>
+												<td class="text-right" id="food">0</td>
+											</tr>
+											<tr>
+												<th>Gasoline</th>
+												<td class="text-right" id="gas">0</td>
+											</tr>
+											<tr>
+												<th>Munitions</th>
+												<td class="text-right" id="munitions">0</td>
+											</tr>
+											<tr>
+												<th>Steel</th>
+												<td class="text-right" id="steel">0</td>
+											</tr>
+											<tr>
+												<th>Aluminum</th>
+												<td class="text-right" id="aluminum">0</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="col-md-6">
+									<h4 class="text-center">Units</h4>
+									<table class="table table-hover">
+										<tbody>
+											<tr>
+												<th>Soldiers</th>
+												<td class="text-right" id="soldiers">0</td>
+											</tr>
+											<tr>
+												<th>Tanks</th>
+												<td class="text-right" id="tanks">0</td>
+											</tr>
+											<tr>
+												<th>Aircraft</th>
+												<td class="text-right" id="aircraft">0</td>
+											</tr>
+											<tr>
+												<th>Ships</th>
+												<td class="text-right" id="ships">0</td>
+											</tr>
+											<tr>
+												<th>Spies</th>
+												<td class="text-right" id="spies">0</td>
+											</tr>
+											<tr>
+												<th>Missiles</th>
+												<td class="text-right" id="missiles">0</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>	
+						</div>
+		
+						<div class="tab-pane fade" id="score">
+							<h3 class="text-center">MMR Score Calculator</h4>
+							<form class="form-horizontal">
+								<fieldset>
+									<div class="form-group">
+										<label for="citiesScore" class="col-lg-2 control-label">Cities</label>
+										<div class="col-lg-10">
+											<input type="number" id="citiesScore" placeholder="Cities" class="form-control" min="1">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="foodScore" class="col-lg-2 control-label">Food</label>
+										<div class="col-lg-10">
+											<input type="number" id="foodScore" placeholder="Food" class="form-control" min="1">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="gasScore" class="col-lg-2 control-label">Gas</label>
+										<div class="col-lg-10">
+											<input type="number" id="gasScore" placeholder="Gasoline" class="form-control" min="1">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="munitionsScore" class="col-lg-2 control-label">Munitions</label>
+										<div class="col-lg-10">
+											<input type="number" id="munitionsScore" placeholder="Munitions" class="form-control" min="1">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="steelScore" class="col-lg-2 control-label">Steel</label>
+										<div class="col-lg-10">
+											<input type="number" id="steelScore" placeholder="Steel" class="form-control" min="1">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="aluminumScore" class="col-lg-2 control-label">Aluminum</label>
+										<div class="col-lg-10">
+											<input type="number" id="aluminumScore" placeholder="Aluminum" class="form-control" min="1">
+										</div>
+									</div>
+									<a href="#" class="btn btn-primary btn-lg btn-block" id="calcScore">Calculate</a>
+								</fieldset>
+							</form>
+
+							<hr>
+
+							<h3 id="mmrScore" class='text-center'>0</h3>
+
+							<table class="table table-hover">
+								<tr>
+									<th>Resource</th>
+									<th>Weight</th>
+									<th>Score</th>
+								</tr>
+								<tr>
+									<td>Food</td>
+									<td>5%</td>
+									<td id="foodScoreA">0</td>
+								<tr>
+								<tr>
+									<td>Gasoline</td>
+									<td>30%</td>
+									<td id="gasScoreA">0</td>
+								<tr>
+								<tr>
+									<td>Munitions</td>
+									<td>25%</td>
+									<td id="munitionsScoreA">0</td>
+								<tr>
+								<tr>
+									<td>Steel</td>
+									<td>30%</td>
+									<td id="steelScoreA">0</td>
+								<tr>
+								<tr>
+									<td>Aluminum</td>
+									<td>10%</td>
+									<td id="aluminumScoreA">0</td>
+								<tr>
+							</table>
+							<p class="text-muted">How MMR is calculated is explained <a href="https://bkpw.net/topic/6418-explaining-mmr-city-grants/" target="_blank">here</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- jQuery first then Bootstrap JS. -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Load our MMR and MMRScore classes -->
+<script src="mmr/js/MMR.js"></script>
+<script src="mmr/js/MMRScore.js"></script>
+<script>
+
+function addCommas(intNum) {
+    return (intNum + '').replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+}
+
+$("#calcMMR").click(function() {
+	var cities = $("#cities").val();
+
+	if (cities < 1) // JS says that 01 is less than 1. wtf? Shit isn't a number. This is why I fucking hate JS
+		return; // There should be some kind of user error here but I just don't fucking feel like doing that
+
+	// Alright now we're gonna calculate shit. I wish I could use actual fucking objects like in any other object, but again, JS fucking blows dick hole. So we're gonna do this an interesting way
+
+	var calc = new MMR(cities);
+
+	calc.calcMMR();
+
+	// Now update all the values -_-
+
+	$("#money").text(addCommas(calc.money));
+	$("#food").text(addCommas(calc.food));
+	$("#gas").text(addCommas(calc.gas));
+	$("#munitions").text(addCommas(calc.munitions));
+	$("#steel").text(addCommas(calc.steel));
+	$("#aluminum").text(addCommas(calc.aluminum));
+	$("#soldiers").text(addCommas(calc.soldiers));
+	$("#tanks").text(addCommas(calc.tanks));
+	$("#aircraft").text(addCommas(calc.aircraft));
+	$("#ships").text(addCommas(calc.ships));
+	$("#spies").text(addCommas(calc.spies));
+	$("#missiles").text(addCommas(calc.missiles));
+})
+</script>
+
+<script>
+
+$("#calcScore").click(function() {
+	var cities, food, gas, munitions, steel, aluminum;
+
+	cities = $("#citiesScore").val();
+	food = $("#foodScore").val();
+	gas = $("#gasScore").val();
+	munitions = $("#munitionsScore").val();
+	steel = $("#steelScore").val();
+	aluminum = $("#aluminumScore").val();
+
+	var score = new MMRScore(cities, food, gas, munitions, steel, aluminum);
+	score.calcMMRScore();
+
+	$("#mmrScore").text(score.mmrScore);
+	$("#foodScoreA").text((score.foodWeight * 100).toFixed(2))
+	$("#gasScoreA").text((score.gasWeight * 100).toFixed(2))
+	$("#munitionsScoreA").text((score.munitionsWeight * 100).toFixed(2))
+	$("#steelScoreA").text((score.steelWeight * 100).toFixed(2))
+	$("#aluminumScoreA").text((score.aluminumWeight * 100).toFixed(2))
+});
+
+</script>
+
+</body>
+
+</html>
