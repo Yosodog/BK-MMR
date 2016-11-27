@@ -78,7 +78,7 @@ var MMR = function(cities) {
         if (this.cities < 3)
             this.tanks = cities * 75;
         else if (this.cities < 8)
-            this.tanks = cities * 100;
+            this.tanks = cities * 150;
         else
             this.tanks = cities * 750;
     };
