@@ -59,7 +59,7 @@ var MMR = function(cities) {
         else if (this.cities < 8)
             this.aluminum = cities * 660;
         else
-            this.aluminum = cities * 742;
+            this.aluminum = cities * 760;
     };
 
     this.calcMoney = function() {
