@@ -16,7 +16,7 @@ var MMRScore = function(cities, food, gas, munitions, steel, aluminum) {
         this.calcSteel();
         this.calcAluminum();
         this.addEverything();
-    }
+    };
 
     this.calcFood = function() {
         // Calculate how much of MMR has been met
@@ -28,7 +28,7 @@ var MMRScore = function(cities, food, gas, munitions, steel, aluminum) {
 
         // Now weigh it
         this.foodWeight = percOfMMR * 0.05;
-    }
+    };
 
     this.calcGas = function() {
         // Calculate how much of MMR has been met
@@ -40,7 +40,7 @@ var MMRScore = function(cities, food, gas, munitions, steel, aluminum) {
 
         // Now weigh it
         this.gasWeight = percOfMMR * 0.3;
-    }
+    };
 
     this.calcMunitions = function() {
         // Calculate how much of MMR has been met
@@ -52,7 +52,7 @@ var MMRScore = function(cities, food, gas, munitions, steel, aluminum) {
 
         // Now weigh it
         this.munitionsWeight = percOfMMR * 0.25;
-    }
+    };
 
     this.calcSteel = function() {
         // Calculate how much of MMR has been met
@@ -64,7 +64,7 @@ var MMRScore = function(cities, food, gas, munitions, steel, aluminum) {
 
         // Now weigh it
         this.steelWeight = percOfMMR * 0.3;
-    }
+    };
 
     this.calcAluminum = function() {
         // Calculate how much of MMR has been met
@@ -76,10 +76,10 @@ var MMRScore = function(cities, food, gas, munitions, steel, aluminum) {
 
         // Now weigh it
         this.aluminumWeight = percOfMMR * 0.1;
-    }
+    };
 
     this.addEverything = function() {
         var mmrScore = (this.foodWeight + this.gasWeight + this.munitionsWeight + this.steelWeight + this.aluminumWeight) * 100;
         this.mmrScore = mmrScore.toFixed(2);
     }
-}
+};

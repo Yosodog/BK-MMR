@@ -15,7 +15,7 @@ var MMR = function(cities) {
         this.calcAircraft();
         this.calcMissiles();
         this.calcSpies();
-    }
+    };
 
     this.calcFood = function() {
         if (this.cities < 3)
@@ -24,7 +24,7 @@ var MMR = function(cities) {
             this.food = cities * 3000;
         else
             this.food = cities * 4000;
-    }
+    };
 
     this.calcGas = function() {
         if (this.cities < 3)
@@ -33,7 +33,7 @@ var MMR = function(cities) {
             this.gas = cities * 1500;
         else
             this.gas = cities * 2500;
-    }
+    };
 
     this.calcMunitions = function() {
         if (this.cities < 3)
@@ -42,7 +42,7 @@ var MMR = function(cities) {
             this.munitions = cities * 2000;
         else
             this.munitions = cities * 2500;
-    }
+    };
 
     this.calcSteel = function() {
         if (this.cities < 3)
@@ -51,7 +51,7 @@ var MMR = function(cities) {
             this.steel = cities * 2000;
         else
             this.steel = cities * 2700;
-    }
+    };
 
     this.calcAluminum = function() {
         if (this.cities < 3)
@@ -60,7 +60,7 @@ var MMR = function(cities) {
             this.aluminum = cities * 660;
         else
             this.aluminum = cities * 742;
-    }
+    };
 
     this.calcMoney = function() {
         if (this.cities < 3)
@@ -71,7 +71,7 @@ var MMR = function(cities) {
             this.money = cities *1500000;
         else
             this.money = cities * 1700000;
-    }
+    };
 
     this.calcTanks = function() {
         // This should always be run BEFORE calcSoldiers()
@@ -81,14 +81,14 @@ var MMR = function(cities) {
             this.tanks = cities * 100;
         else
             this.tanks = cities * 750;
-    }
+    };
 
     this.calcSoldiers = function() {
         if (this.cities < 6)
             this.soldiers = cities * 6000;
         else
             this.soldiers = this.tanks * 0.84;
-    }
+    };
 
     this.calcAircraft = function() {
         if (this.cities < 3)
@@ -97,15 +97,15 @@ var MMR = function(cities) {
             this.aircraft = cities * 10;
         else
             this.aircraft = cities * 54;
-    }
+    };
 
     this.calcShips = function() {
         this.ships = 0;
-    }
+    };
 
     this.calcMissiles = function() {
         this.missiles = 0;
-    }
+    };
 
     this.calcSpies = function() {
         if (this.cities < 3)
