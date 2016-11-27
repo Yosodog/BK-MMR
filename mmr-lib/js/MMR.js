@@ -20,7 +20,7 @@ var MMR = function(cities) {
     this.calcFood = function() {
         if (this.cities < 3)
             this.food = 0;
-        else if (cities < 8)
+        else if (this.cities < 8)
             this.food = cities * 3000;
         else
             this.food = cities * 4000;
@@ -29,7 +29,7 @@ var MMR = function(cities) {
     this.calcGas = function() {
         if (this.cities < 3)
             this.gas = 0;
-        else if (cities < 8)
+        else if (this.cities < 8)
             this.gas = cities * 1500;
         else
             this.gas = cities * 2500;
