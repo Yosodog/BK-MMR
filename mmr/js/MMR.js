@@ -50,7 +50,7 @@ var MMR = function(cities) {
         else if (this.cities < 8)
             this.steel = cities * 2000;
         else
-            this.steel = cities * 2500;
+            this.steel = cities * 2700;
     }
 
     this.calcAluminum = function() {
