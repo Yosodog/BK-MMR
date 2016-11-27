@@ -94,7 +94,7 @@ var MMR = function(cities) {
         if (this.cities < 3)
             this.aircraft = cities * 5;
         else if (this.cities < 5)
-            this.aircraft = cities * 10;
+            this.aircraft = cities * 24;
         else
             this.aircraft = cities * 54;
     };
