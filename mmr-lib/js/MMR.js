@@ -23,7 +23,7 @@ var MMR = function(cities) {
         else if (this.cities < 8)
             this.food = cities * 3000;
         else
-            this.food = cities * 4000;
+            this.food = cities * 5000;
     };
 
     this.calcGas = function() {
