@@ -226,7 +226,7 @@ function addCommas(intNum) {
 $("#calcMMR").click(function() {
     var cities = $("#cities").val();
 
-    if (cities < 1) // JS says that 01 is less than 1. wtf? Shit isn't a number. This is why I fucking hate JS
+    if (cities < 1)
         return; // There should be some kind of user error here but I just don't fucking feel like doing that
 
     // Alright now we're gonna calculate shit. I wish I could use actual fucking objects like in any other object, but again, JS fucking blows dick hole. So we're gonna do this an interesting way
